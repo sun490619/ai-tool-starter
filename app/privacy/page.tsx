@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Header, Footer } from '@/components/layout';
+import {Header} from '@/components/layout';
 import { AdSenseAutoAds, AdInArticle } from '@/components/adsense';
 import { siteConfig } from '@/lib/site-config';
 import Link from 'next/link';
@@ -150,9 +150,7 @@ export default function PrivacyPage() {
 
           <AdInArticle />
         </main>
-
-        <Footer currentPath="/privacy" />
-      </div>
+</div>
     </>
   );
 }

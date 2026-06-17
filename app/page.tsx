@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Header, Footer } from '@/components/layout';
+import {Header} from '@/components/layout';
 import { CalculatorForm } from '@/components/calculator-form';
 import { AdSenseAutoAds, AdInArticle } from '@/components/adsense';
 import { siteConfig } from '@/lib/site-config';
@@ -215,9 +215,7 @@ export default function HomePage() {
           {/* Ad In Article */}
           <AdInArticle />
         </main>
-
-        <Footer currentPath="/" />
-      </div>
+</div>
     </>
   );
 }

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Header, Footer } from '@/components/layout';
+import {Header} from '@/components/layout';
 import { CalculatorForm } from '@/components/calculator-form';
 import { AdSenseAutoAds, AdHeader, AdFooter, AdInArticle } from '@/components/adsense';
 import { siteConfig } from '@/lib/site-config';
@@ -218,9 +218,7 @@ t  = 投资年数
 
           <AdInArticle />
         </main>
-
-        <Footer currentPath="/calculator" />
-      </div>
+</div>
     </>
   );
 }
