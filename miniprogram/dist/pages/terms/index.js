@@ -1,0 +1,1 @@
+Page({ data: {}, onLoad() {}, onShareAppMessage() { return { title: '复利智投 - 使用条款', path: '/pages/terms/index' }; } })

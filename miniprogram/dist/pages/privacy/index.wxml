@@ -1,0 +1,24 @@
+<!-- privacy/index.wxml -->
+<view class="page">
+  <view class="ad-banner"><view class="ad-placeholder">广告位预留</view></view>
+  <view class="container">
+    <text class="page-title">🔒 隐私政策</text>
+    <view class="card">
+      <text class="section-title">生效日期：2026年1月1日</text>
+      <text class="policy-text">欢迎使用复利智投（以下简称"我们"）。保护您的隐私对我们至关重要。本政策说明我们如何收集、使用、存储和保护您的信息。</text>
+      <text class="section-title">1. 我们收集的信息</text>
+      <text class="policy-text">本工具为纯前端计算器，不收集任何个人身份信息（PII）。所有计算数据仅存储在您的设备本地（localStorage/微信存储），不会上传至任何服务器。</text>
+      <text class="section-title">2. 本地存储数据</text>
+      <text class="policy-text">为提供更好体验，我们可能在您的设备本地存储：计算参数历史、偏好设置（货币单位、复利频率）、主题偏好。您可随时在小程序设置中清除。</text>
+      <text class="section-title">3. 第三方服务</text>
+      <text class="policy-text">本小程序可能接入微信广告组件（流量主）展示广告，广告服务由微信官方提供，遵循微信广告隐私政策。</text>
+      <text class="section-title">4. 您的权利</text>
+      <text class="policy-text">您拥有访问、删除本地数据的权利。清除小程序缓存即可删除所有本地数据。</text>
+      <text class="section-title">5. 变更通知</text>
+      <text class="policy-text">政策更新将在本页面发布，生效日期即为更新日期。建议定期查看。</text>
+      <text class="section-title">联系我们</text>
+      <text class="policy-text">如有疑问，请通过以下方式联系：邮箱：sun490619@gmail.com | 微信：w15525061109</text>
+    </view>
+  </view>
+  <view class="footer"><text>© 2026 复利智投</text></view>
+</view>

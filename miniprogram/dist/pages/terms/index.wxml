@@ -1,0 +1,26 @@
+<!-- terms/index.wxml -->
+<view class="page">
+  <view class="ad-banner"><view class="ad-placeholder">广告位预留</view></view>
+  <view class="container">
+    <text class="page-title">📜 使用条款</text>
+    <view class="card">
+      <text class="section-title">生效日期：2026年1月1日</text>
+      <text class="policy-text">请仔细阅读本条款。使用本小程序即表示您同意遵守以下条款。</text>
+      <text class="section-title">1. 服务说明</text>
+      <text class="policy-text">复利智投提供免费的在线复利计算工具，支持定投、多种复利频率、可视化图表。仅供参考学习，不构成任何投资建议。</text>
+      <text class="section-title">2. 使用规范</text>
+      <text class="policy-text">您承诺不将本工具用于任何非法用途；不逆向工程、反编译或试图获取源代码；不干扰服务正常运行。</text>
+      <text class="section-title">3. 免责声明</text>
+      <text class="policy-text">计算结果基于标准数学公式，仅供参考。实际投资收益受市场波动、费率、税费等影响，请以金融机构结算为准。因使用本工具造成的任何损失，我们不承担责任。</text>
+      <text class="section-title">4. 知识产权</text>
+      <text class="policy-text">本小程序界面设计、代码、算法逻辑归复利智投所有。未经授权不得复制、传播、商业使用。</text>
+      <text class="section-title">5. 服务变更与终止</text>
+      <text class="policy-text">我们保留随时修改、暂停或终止服务的权利，无需提前通知。</text>
+      <text class="section-title">6. 适用法律与争议解决</text>
+      <text class="policy-text">本条款适用中华人民共和国法律。争议友好协商解决；协商不成提交有管辖权法院。</text>
+      <text class="section-title">联系我们</text>
+      <text class="policy-text">邮箱：sun490619@gmail.com | 微信：w15525061109</text>
+    </view>
+  </view>
+  <view class="footer"><text>© 2026 复利智投</text></view>
+</view>

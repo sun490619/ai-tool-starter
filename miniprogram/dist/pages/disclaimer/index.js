@@ -1,0 +1,1 @@
+Page({ data: {}, onLoad() {}, onShareAppMessage() { return { title: '复利智投 - 免责声明', path: '/pages/disclaimer/index' }; } })

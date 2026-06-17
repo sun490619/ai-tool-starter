@@ -1,0 +1,1 @@
+Page({ data: {}, onLoad() {}, onShareAppMessage() { return { title: '复利智投 - 关于我们', path: '/pages/about/index' }; } })

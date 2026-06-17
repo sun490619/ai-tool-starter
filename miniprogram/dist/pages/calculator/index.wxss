@@ -1,0 +1,152 @@
+/** calculator/index.wxss **/
+.page {
+  min-height: 100vh;
+}
+
+.calculator-form {
+  margin-bottom: 16px;
+}
+
+.picker-text {
+  display: block;
+  padding: 12px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 15px;
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+page[theme="dark"] .picker-text {
+  background: #1e293b;
+  border-color: #334155;
+  color: #f1f5f9;
+}
+
+.results-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.result-summary {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 16px;
+  margin: -16px -16px 16px;
+}
+
+page[theme="dark"] .result-summary {
+  background: #1e293b;
+}
+
+.result-card {
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.result-label {
+  display: block;
+  font-size: 12px;
+  opacity: 0.9;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.result-value {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.insights {
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+  border-radius: 12px;
+  padding: 16px;
+  margin: -16px -16px 0;
+}
+
+page[theme="dark"] .insights {
+  background: #3f2e0e;
+  border-color: #92400e;
+}
+
+.insight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.insight-item {
+  background: #fffbeb;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+}
+
+page[theme="dark"] .insight-item {
+  background: #45300e;
+}
+
+.insight-label {
+  display: block;
+  font-size: 11px;
+  color: #92400e;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+page[theme="dark"] .insight-label {
+  color: #fde68a;
+}
+
+.insight-value {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+page[theme="dark"] .insight-value {
+  color: #fde68a;
+}
+
+.chart-placeholder {
+  position: relative;
+}
+
+.chart-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.data-table th,
+.data-table td {
+  padding: 10px 8px;
+  font-size: 12px;
+}
+
+.data-table th:first-child,
+.data-table td:first-child {
+  min-width: 60px;
+}
+
+.data-table td:nth-child(2),
+.data-table td:nth-child(3),
+.data-table td:nth-child(4),
+.data-table td:nth-child(5) {
+  min-width: 90px;
+}
+
+/* 分享按钮区域 */
+.card > .btn {
+  margin: 0;
+}

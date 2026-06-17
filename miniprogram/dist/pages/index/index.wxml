@@ -1,0 +1,116 @@
+<!-- index.wxml -->
+<view class="page">
+  <!-- 广告位 -->
+  <view class="ad-banner">
+    <view class="ad-placeholder">广告位预留 (Banner)</view>
+  </view>
+
+  <view class="container">
+    <!-- Hero 区域 -->
+    <view class="hero">
+      <view class="badge badge-primary">完全免费 · 无需注册 · 数据不上云</view>
+      <text class="hero-title">专业 <text class="highlight">复利计算器</text> 在线工具</text>
+      <text class="hero-desc">支持初始本金、每月定投、复利频率、年化收益率自定义设置。提供详细年度明细表、可视化增长图表、关键洞察分析，助您科学规划投资未来。</text>
+      
+      <view class="hero-actions">
+        <navigator url="/pages/calculator/index" class="btn btn-primary" hover-class="btn-primary-hover">
+          <text class="btn-icon">🧮</text> 立即开始计算
+        </navigator>
+        <navigator url="/pages/about/index" class="btn btn-secondary" hover-class="btn-secondary-hover">
+          了解详情
+        </navigator>
+      </view>
+
+      <view class="features">
+        <view class="feature">
+          <text class="feature-icon">🔒</text>
+          <text class="feature-title">纯前端计算</text>
+          <text class="feature-desc">所有计算在本地完成，数据不上传服务器</text>
+        </view>
+        <view class="feature">
+          <text class="feature-icon">📊</text>
+          <text class="feature-title">详细明细表</text>
+          <text class="feature-desc">每年本金、投入、收益、余额一目了然</text>
+        </view>
+        <view class="feature">
+          <text class="feature-icon">📈</text>
+          <text class="feature-title">可视化图表</text>
+          <text class="feature-desc">直观展示复利效应，看清财富增长曲线</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 广告位 -->
+    <view class="ad-placeholder">广告位预留 (In-article)</view>
+
+    <!-- 使用指南 -->
+    <view class="card">
+      <text class="section-title">📖 使用指南</text>
+      <view class="guide-list">
+        <view class="guide-item">
+          <text class="guide-num">1</text>
+          <view class="guide-content">
+            <text class="guide-title">填写基础参数</text>
+            <text class="guide-desc">输入初始本金、月定投金额、预期年化收益率、投资年限</text>
+          </view>
+        </view>
+        <view class="guide-item">
+          <text class="guide-num">2</text>
+          <view class="guide-content">
+            <text class="guide-title">选择复利频率</text>
+            <text class="guide-desc">支持年复利、半年复利、季度复利、月复利、日复利</text>
+          </view>
+        </view>
+        <view class="guide-item">
+          <text class="guide-num">3</text>
+          <view class="guide-content">
+            <text class="guide-title">查看结果分析</text>
+            <text class="guide-desc">获得期末总额、总投入、总收益、复利贡献率等核心指标</text>
+          </view>
+        </view>
+        <view class="guide-item">
+          <text class="guide-num">4</text>
+          <view class="guide-content">
+            <text class="guide-title">导出或分享</text>
+            <text class="guide-desc">支持年度明细表导出、结果分享给好友</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 常见问题 -->
+    <view class="card">
+      <text class="section-title">❓ 常见问题</text>
+      <view class="faq-list">
+        <view class="faq-item">
+          <text class="faq-q">复利和单利有什么区别？</text>
+          <text class="faq-a">单利只计算本金利息，复利将利息加入本金继续产生利息，时间越长差距越大。</text>
+        </view>
+        <view class="faq-item">
+          <text class="faq-q">定投怎么计算复利？</text>
+          <text class="faq-a">每期定投金额按剩余期数复利计算，本工具支持月度定投自动展开计算每年明细。</text>
+        </view>
+        <view class="faq-item">
+          <text class="faq-q">数据会上传服务器吗？</text>
+          <text class="faq-a">不会。所有计算纯前端完成，无任何网络请求，您的财务数据完全私密。</text>
+        </view>
+        <view class="faq-item">
+          <text class="faq-q">结果准确吗？</text>
+          <text class="faq-a">采用标准复利公式计算，精确到分。仅供参考，实际投资请以机构结算为准。</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- Footer -->
+  <view class="footer">
+    <text>© 2026 复利智投 · 专业复利计算器</text>
+    <navigator url="/pages/privacy/index" class="footer-link">隐私政策</navigator>
+    <text>·</text>
+    <navigator url="/pages/terms/index" class="footer-link">使用条款</navigator>
+    <text>·</text>
+    <navigator url="/pages/disclaimer/index" class="footer-link">免责声明</navigator>
+    <text>·</text>
+    <navigator url="/pages/about/index" class="footer-link">关于我们</navigator>
+  </view>
+</view>

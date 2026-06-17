@@ -1,0 +1,164 @@
+<!-- calculator/index.wxml -->
+<view class="page">
+  <!-- 顶部广告 -->
+  <view class="ad-banner">
+    <view class="ad-placeholder">广告位预留 (Banner)</view>
+  </view>
+
+  <view class="container">
+    <!-- 计算表单 -->
+    <view class="card calculator-form">
+      <text class="page-title">🧮 复利计算器</text>
+
+      <view class="form-group">
+        <text class="form-label">初始本金 (元)</text>
+        <input class="form-input" type="number" placeholder="例如: 10000" value="{{form.principal}}" bindinput="onPrincipalChange" />
+      </view>
+
+      <view class="form-group">
+        <text class="form-label">每月定投 (元)</text>
+        <input class="form-input" type="number" placeholder="例如: 1000 (可选)" value="{{form.monthlyContribution}}" bindinput="onMonthlyChange" />
+      </view>
+
+      <view class="grid-2">
+        <view class="form-group">
+          <text class="form-label">预期年化收益率 (%)</text>
+          <input class="form-input" type="number" placeholder="例如: 8" value="{{form.annualRate}}" bindinput="onRateChange" />
+        </view>
+        <view class="form-group">
+          <text class="form-label">投资年限 (年)</text>
+          <input class="form-input" type="number" placeholder="例如: 20" value="{{form.years}}" bindinput="onYearsChange" />
+        </view>
+      </view>
+
+      <view class="form-group">
+        <text class="form-label">复利频率</text>
+        <picker class="form-select" value="{{compoundIndex}}" range="{{compoundOptions}}" bindchange="onCompoundChange">
+          <view class="picker-text">{{compoundOptions[compoundIndex].label}}</view>
+        </picker>
+      </view>
+
+      <view class="form-group">
+        <text class="form-label">货币单位</text>
+        <picker class="form-select" value="{{currencyIndex}}" range="{{currencyOptions}}" bindchange="onCurrencyChange">
+          <view class="picker-text">{{currencyOptions[currencyIndex].label}}</view>
+        </picker>
+      </view>
+
+      <view class="divider"></view>
+
+      <button class="btn btn-primary" bindtap="calculate" loading="{{loading}}">
+        {{loading ? '计算中...' : '开始计算'}}
+      </button>
+
+      <button class="btn btn-secondary" bindtap="reset" style="margin-top: 12px;">
+        重置参数
+      </button>
+    </view>
+
+    <!-- 结果展示 -->
+    <view wx:if="{{hasResult}}" class="results-section">
+      <!-- 核心结果卡片 -->
+      <view class="card result-summary">
+        <text class="section-title">📊 计算结果</text>
+        
+        <view class="grid-2">
+          <view class="result-card">
+            <text class="result-label">期末总额</text>
+            <text class="result-value">{{formatCurrency(finalAmount)}}</text>
+          </view>
+          <view class="result-card" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+            <text class="result-label">总收益</text>
+            <text class="result-value">{{formatCurrency(totalGain)}}</text>
+          </view>
+        </view>
+
+        <view class="grid-2" style="margin-top: 12px;">
+          <view class="result-card" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+            <text class="result-label">总投入</text>
+            <text class="result-value">{{formatCurrency(totalInvested)}}</text>
+          </view>
+          <view class="result-card" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
+            <text class="result-label">收益率</text>
+            <text class="result-value">{{totalReturnRate}}%</text>
+          </view>
+        </view>
+      </view>
+
+      <!-- 关键洞察 -->
+      <view class="card insights">
+        <text class="section-title">💡 关键洞察</text>
+        <view class="insight-grid">
+          <view class="insight-item">
+            <text class="insight-label">复利贡献率</text>
+            <text class="insight-value">{{compoundContribution}}%</text>
+          </view>
+          <view class="insight-item">
+            <text class="insight-label">资金倍数</text>
+            <text class="insight-value">{{fundMultiplier}}x</text>
+          </view>
+          <view class="insight-item">
+            <text class="insight-label">年均收益</text>
+            <text class="insight-value">{{formatCurrency(avgAnnualGain)}}</text>
+          </view>
+          <view class="insight-item">
+            <text class="insight-label">翻倍时间</text>
+            <text class="insight-value">{{doublingTime}} 年</text>
+          </view>
+        </view>
+      </view>
+
+      <!-- 图表 -->
+      <view class="card">
+        <text class="section-title">📈 增长趋势图</text>
+        <view class="chart-placeholder">
+          <canvas type="2d" id="growthChart" canvas-id="growthChart" style="width: 100%; height: 280px;"></canvas>
+          <text class="chart-title" wx:if="{{!chartReady}}">图表生成中...</text>
+        </view>
+      </view>
+
+      <!-- 年度明细表 -->
+      <view class="card">
+        <text class="section-title">📋 年度明细表</text>
+        <view class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>年份</th>
+                <th>期初余额</th>
+                <th>本年投入</th>
+                <th>本年收益</th>
+                <th>期末余额</th>
+              </tr>
+            </thead>
+            <tbody>
+              <block wx:for="{{yearlyData}}" wx:key="year">
+                <tr>
+                  <td>{{item.year}}</td>
+                  <td>{{formatCurrency(item.startBalance)}}</td>
+                  <td>{{formatCurrency(item.contribution)}}</td>
+                  <td style="color: #10b981;">{{formatCurrency(item.gain)}}</td>
+                  <td style="font-weight: 600;">{{formatCurrency(item.endBalance)}}</td>
+                </tr>
+              </block>
+            </tbody>
+          </table>
+        </view>
+      </view>
+
+      <!-- 分享/导出按钮 -->
+      <view class="card" style="display: flex; gap: 12px;">
+        <button class="btn btn-primary" style="flex: 1;" bindtap="shareResult">分享结果</button>
+        <button class="btn btn-secondary" style="flex: 1;" bindtap="exportData">导出数据</button>
+      </view>
+    </view>
+
+    <!-- 底部广告 -->
+    <view class="ad-placeholder">广告位预留 (Bottom)</view>
+  </view>
+
+  <!-- Footer -->
+  <view class="footer">
+    <text>© 2026 复利智投 · 仅供参考，不构成投资建议</text>
+  </view>
+</view>

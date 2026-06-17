@@ -1,0 +1,1 @@
+Page({ data: {}, onLoad() {}, onShareAppMessage() { return { title: '复利智投 - 隐私政策', path: '/pages/privacy/index' }; } })

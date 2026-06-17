@@ -1,0 +1,26 @@
+<!-- disclaimer/index.wxml -->
+<view class="page">
+  <view class="ad-banner"><view class="ad-placeholder">广告位预留</view></view>
+  <view class="container">
+    <text class="page-title">⚖️ 免责声明</text>
+    <view class="card">
+      <text class="section-title">重要提示</text>
+      <text class="policy-text">本声明适用于复利智投（以下简称"本工具"）提供的所有内容与服务。使用即表示您已阅读、理解并同意本声明全部内容。</text>
+      <text class="section-title">1. 非专业投资建议</text>
+      <text class="policy-text">本工具提供的计算结果、图表、分析仅供参考学习，不构成任何形式的投资建议、买卖要约或财务规划建议。投资决策请咨询持牌财务顾问。</text>
+      <text class="section-title">2. 结果准确性</text>
+      <text class="policy-text">计算基于标准复利公式，精度为double浮点数。因输入错误、参数设置、公式局限性导致的偏差，我们不承担责任。实际收益以金融机构结算为准。</text>
+      <text class="section-title">3. 市场风险</text>
+      <text class="policy-text">投资有风险，入市需谨慎。过往业绩不代表未来表现。本工具不保证任何收益率，不承担本金损失风险。</text>
+      <text class="section-title">4. 服务可用性</text>
+      <text class="policy-text">我们努力但不保证服务7x24小时不中断。因维护、升级、网络故障、不可抗力导致的中断，不承担责任。</text>
+      <text class="section-title">5. 第三方链接/广告</text>
+      <text class="policy-text">工具中可能包含第三方广告（微信流量主），点击后跳转至第三方页面，内容由第三方负责，我们不背书也不担责。</text>
+      <text class="section-title">6. 责任限制</text>
+      <text class="policy-text">在法律允许最大范围内，我们不对任何间接、偶然、特殊、惩罚性损害承担责任，包括但不限于利润损失、数据丢失、业务中断。</text>
+      <text class="section-title">联系我们</text>
+      <text class="policy-text">邮箱：sun490619@gmail.com | 微信：w15525061109</text>
+    </view>
+  </view>
+  <view class="footer"><text>© 2026 复利智投</text></view>
+</view>

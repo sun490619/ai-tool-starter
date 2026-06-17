@@ -1,0 +1,44 @@
+<!-- about/index.wxml -->
+<view class="page">
+  <view class="ad-banner"><view class="ad-placeholder">广告位预留</view></view>
+  <view class="container">
+    <view class="about-hero">
+      <text class="about-logo">💰</text>
+      <text class="about-name">复利智投</text>
+      <text class="about-tagline">专业免费复利计算器</text>
+      <text class="about-version">版本 1.0.0</text>
+    </view>
+    <view class="card">
+      <text class="section-title">🎯 我们的使命</text>
+      <text class="policy-text">让复利的力量被更多人看见、理解、利用。通过专业、透明、免费的工具，帮助每个人科学规划财富未来。</text>
+    </view>
+    <view class="card">
+      <text class="section-title">✨ 核心功能</text>
+      <view class="feature-list">
+        <view class="feature-item"><text class="feat-icon">🧮</text><view><text class="feat-title">专业计算引擎</text><text class="feat-desc">支持年/半年/季/月/日复利，精确到分</text></view></view>
+        <view class="feature-item"><text class="feat-icon">📊</text><view><text class="feat-title">可视化图表</text><text class="feat-desc">Canvas原生绘制，投入vs余额一目了然</text></view></view>
+        <view class="feature-item"><text class="feat-icon">📋</text><view><text class="feat-title">年度明细表</text><text class="feat-desc">每年期初、投入、收益、期末完整记录</text></view></view>
+        <view class="feature-item"><text class="feat-icon">💡</text><view><text class="feat-title">关键洞察</text><text class="feat-desc">复利贡献率、资金倍数、翻倍时间自动算</text></view></view>
+        <view class="feature-item"><text class="feat-icon">🔒</text><view><text class="feat-title">隐私优先</text><text class="feat-desc">纯本地计算，零数据上传，无账号体系</text></view></view>
+        <view class="feature-item"><text class="feat-icon">🌍</text><view><text class="feat-title">多币种支持</text><text class="feat-desc">人民币/美元/欧元自由切换</text></view></view>
+      </view>
+    </view>
+    <view class="card">
+      <text class="section-title">🛠 技术栈</text>
+      <text class="policy-text">微信小程序原生开发 (WXML/WXSS/JS) · Canvas 2D 图表 · 无后端依赖 · 零成本部署</text>
+    </view>
+    <view class="card">
+      <text class="section-title">📞 联系我们</text>
+      <text class="policy-text">邮箱：sun490619@gmail.com</text>
+      <text class="policy-text">微信：w15525061109</text>
+      <text class="policy-text">官网：https://ai-tool-starter-nu.vercel.app</text>
+    </view>
+    <view class="card">
+      <text class="section-title">📄 相关文档</text>
+      <navigator url="/pages/privacy/index" class="doc-link">隐私政策</navigator>
+      <navigator url="/pages/terms/index" class="doc-link">使用条款</navigator>
+      <navigator url="/pages/disclaimer/index" class="doc-link">免责声明</navigator>
+    </view>
+  </view>
+  <view class="footer"><text>© 2026 复利智投 · 做复利的朋友</text></view>
+</view>
