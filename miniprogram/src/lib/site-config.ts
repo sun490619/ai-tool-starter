@@ -5,27 +5,27 @@
 
 export const siteConfig = {
   // 基础信息
-  name: '复利计算器',
+  name: '复利智投',
   shortName: '复利计算器',
   description: '专业的在线复利计算器，支持定投、复利频率设置、收益可视化图表。帮助您规划投资未来，实现财富增值。',
-  url: 'https://your-domain.com',
+  url: 'https://ai-tool-starter-nu.vercel.app',
   
   // 作者/所有者信息（用于隐私政策、版权等）
   author: {
-    name: '您的名字/品牌名',
-    email: 'your-email@example.com',
-    website: 'https://your-domain.com',
+    name: '复利智投团队',
+    email: 'sun490619@gmail.com',
+    website: 'https://ai-tool-starter-nu.vercel.app',
   },
   
   // 联系信息
   contact: {
-    email: 'your-email@example.com',
-    wechat: 'your-wechat-id',
+    email: 'sun490619@gmail.com',
+    wechat: 'w15525061109',
   },
   
   // 备案信息（中国大陆必需）
   icp: {
-    number: '京ICP备xxxxxxxx号',
+    number: '',
     url: 'https://beian.miit.gov.cn',
   },
   
