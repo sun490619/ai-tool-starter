@@ -33,14 +33,14 @@
 
       <view class="form-group">
         <text class="form-label">复利频率</text>
-        <picker class="form-select" value="{{compoundIndex}}" range="{{compoundOptions}}" bindchange="onCompoundChange">
+        <picker class="form-select" value="{{compoundIndex}}" range="{{compoundOptions}}" range-key="label" bindchange="onCompoundChange">
           <view class="picker-text">{{compoundOptions[compoundIndex].label}}</view>
         </picker>
       </view>
 
       <view class="form-group">
         <text class="form-label">货币单位</text>
-        <picker class="form-select" value="{{currencyIndex}}" range="{{currencyOptions}}" bindchange="onCurrencyChange">
+        <picker class="form-select" value="{{currencyIndex}}" range="{{currencyOptions}}" range-key="label" bindchange="onCurrencyChange">
           <view class="picker-text">{{currencyOptions[currencyIndex].label}}</view>
         </picker>
       </view>
