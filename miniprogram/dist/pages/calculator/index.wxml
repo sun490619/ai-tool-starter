@@ -12,22 +12,22 @@
 
       <view class="form-group">
         <text class="form-label">初始本金 (元)</text>
-        <input class="form-input" type="number" placeholder="例如: 10000" value="{{form.principal}}" bindinput="onPrincipalChange" />
+        <input class="form-input" type="digit" placeholder="例如: 10000" value="{{form.principal}}" bindinput="onPrincipalChange" />
       </view>
 
       <view class="form-group">
         <text class="form-label">每月定投 (元)</text>
-        <input class="form-input" type="number" placeholder="例如: 1000 (可选)" value="{{form.monthlyContribution}}" bindinput="onMonthlyChange" />
+        <input class="form-input" type="digit" placeholder="例如: 1000 (可选)" value="{{form.monthlyContribution}}" bindinput="onMonthlyChange" />
       </view>
 
       <view class="grid-2">
         <view class="form-group">
           <text class="form-label">预期年化收益率 (%)</text>
-          <input class="form-input" type="number" placeholder="例如: 8" value="{{form.annualRate}}" bindinput="onRateChange" />
+          <input class="form-input" type="digit" placeholder="例如: 8" value="{{form.annualRate}}" bindinput="onRateChange" />
         </view>
         <view class="form-group">
           <text class="form-label">投资年限 (年)</text>
-          <input class="form-input" type="number" placeholder="例如: 20" value="{{form.years}}" bindinput="onYearsChange" />
+          <input class="form-input" type="digit" placeholder="例如: 20" value="{{form.years}}" bindinput="onYearsChange" />
         </view>
       </view>
 
