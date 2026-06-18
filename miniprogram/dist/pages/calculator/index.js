@@ -107,9 +107,9 @@ Page({
 
     // 定投复利 (期末投入)
     let contributionFuture = 0;
+    const periodsPerYear = 12;
+    const k = n / periodsPerYear; // 每月对应的复利周期数
     if (PMT > 0) {
-      const periodsPerYear = 12;
-      const k = n / periodsPerYear; // 每月对应的复利周期数
       for (let year = 1; year <= t; year++) {
         for (let month = 1; month <= 12; month++) {
           const remainingPeriods = totalPeriods - (year - 1) * n - Math.ceil(month * k);
@@ -208,28 +208,34 @@ Page({
 
     this.setData({ loading: true });
 
-    setTimeout(() => {
-      const compoundFrequency = this.getCompoundFrequency();
-      const result = this.calculateCompoundInterest({
-        principal: this.data.form.principal,
-        monthlyContribution: this.data.form.monthlyContribution,
-        annualRate: this.data.form.annualRate,
-        years: this.data.form.years,
-        compoundFrequency,
-      });
+    try {
+      setTimeout(() => {
+        const compoundFrequency = this.getCompoundFrequency();
+        const result = this.calculateCompoundInterest({
+          principal: this.data.form.principal,
+          monthlyContribution: this.data.form.monthlyContribution,
+          annualRate: this.data.form.annualRate,
+          years: this.data.form.years,
+          compoundFrequency,
+        });
 
-      this.setData({
-        ...result,
-        hasResult: true,
-        loading: false,
-        totalReturnRate: result.totalReturnRate.toFixed(2),
-        compoundContribution: result.compoundContribution.toFixed(1),
-        fundMultiplier: result.fundMultiplier.toFixed(2),
-        doublingTime: result.doublingTime.toFixed(1),
-      }, () => {
-        this.drawChart();
-      });
-    }, 100);
+        this.setData({
+          ...result,
+          hasResult: true,
+          loading: false,
+          totalReturnRate: result.totalReturnRate.toFixed(2),
+          compoundContribution: result.compoundContribution.toFixed(1),
+          fundMultiplier: result.fundMultiplier.toFixed(2),
+          doublingTime: result.doublingTime.toFixed(1),
+        }, () => {
+          this.drawChart();
+        });
+      }, 100);
+    } catch (err) {
+      console.error('计算报错:', err);
+      this.setData({ loading: false });
+      wx.showToast({ title: '计算出错，请重试', icon: 'none' });
+    }
   },
 
   // 绘制图表
